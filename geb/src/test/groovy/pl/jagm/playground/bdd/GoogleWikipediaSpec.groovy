@@ -19,6 +19,7 @@ import geb.spock.GebReportingSpec
 
 import spock.lang.*
 
+@Ignore
 @Stepwise
 class GoogleWikipediaSpec extends GebReportingSpec {
 
