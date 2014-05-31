@@ -29,4 +29,18 @@ class HelloAppSpec extends GebReportingSpec {
         $('h1').text() == 'Hello world!'
     }
 
+    def "click Test link"() {
+        given:
+        def $link = $('ul li a', text: 'Test')
+
+        when:
+        $link.click()
+
+        then:
+        waitFor(2, {
+            $('h1').text() == 'Test'
+        })
+
+    }
+
 }
