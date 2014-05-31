@@ -1,10 +1,9 @@
-/*
-	This is the Geb configuration file.
-	
-	See: http://www.gebish.org/manual/current/configuration.html
-*/
+import com.gargoylesoftware.htmlunit.BrowserVersion
+import org.openqa.selenium.htmlunit.HtmlUnitDriver
 
-import org.openqa.selenium.firefox.FirefoxDriver
 
-// See: http://code.google.com/p/selenium/wiki/HtmlUnitDriver
-driver = { new FirefoxDriver() }
+driver = {
+    def htmlUnitDriver = new HtmlUnitDriver(BrowserVersion.FIREFOX_24)
+    htmlUnitDriver.setJavascriptEnabled(true)
+    return htmlUnitDriver
+}
