@@ -43,4 +43,18 @@ class HelloAppSpec extends GebReportingSpec {
 
     }
 
+    def "click Transform link"() {
+        given:
+        def $result = $('#transform-result')
+        def $link = $('a', text: 'Transform message')
+
+        when:
+        $link.click()
+
+        then:
+        waitFor(2, {
+            $result.text() == 'tseT'
+        })
+    }
+
 }
