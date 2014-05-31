@@ -62,6 +62,7 @@
                         <geb.build.baseUrl>http://google.com/ncr</geb.build.baseUrl>
                         <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
                     </systemPropertyVariables>
+                    <useFile>false</useFile>
                 </configuration>
             </plugin>
             <plugin>
