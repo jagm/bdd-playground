@@ -57,4 +57,34 @@ class HelloAppSpec extends GebReportingSpec {
         })
     }
 
+    def "click Main link"() {
+        given:
+        def $link = $('ul li a', text: 'Main')
+
+        when:
+        $link.click()
+
+        then:
+        waitFor(2, {
+            $('h1').text() == 'Hello world!'
+        })
+
+    }
+
+    def "click Transform link for Main page"() {
+        given:
+        def $result = $('#transform-result')
+        def $link = $('a', text: 'Transform message')
+
+        when:
+        $link.click()
+
+        then:
+        waitFor(2, {
+            $result.text() == '!dlrow olleH'
+        })
+    }
+
+
+
 }
