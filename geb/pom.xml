@@ -137,6 +137,7 @@
                     <systemPropertyVariables>
                         <geb.build.baseUrl>http://google.com/ncr</geb.build.baseUrl>
                         <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
+                        <geb.env>${geb.env}</geb.env>
                     </systemPropertyVariables>
                     <useFile>false</useFile>
                     <skip>true</skip>

@@ -7,3 +7,13 @@ driver = {
     htmlUnitDriver.setJavascriptEnabled(true)
     return htmlUnitDriver
 }
+
+environments {
+    ie9 {
+        driver = {
+            def htmlUnitDriver = new HtmlUnitDriver(BrowserVersion.INTERNET_EXPLORER_9)
+            htmlUnitDriver.setJavascriptEnabled(true)
+            return htmlUnitDriver
+        }
+    }
+}
