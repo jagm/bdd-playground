@@ -3,7 +3,7 @@
 	<h1>${message}</h1>
 
     <ul>
-        <li><a href="/bdd/test">Test</a></li>
+        <li><a href="/bdd">Main</a></li>
     </ul>
 
     <a href="/bdd/transform" class="action" data-message="${message}">Transform message</a>

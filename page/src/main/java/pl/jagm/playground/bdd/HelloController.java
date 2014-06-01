@@ -22,7 +22,7 @@ public class HelloController {
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String printTest(ModelMap model) {
         model.addAttribute("message", "Test");
-        return "hello";
+        return "hello2";
     }
 
     @RequestMapping(value = "/transform", method = RequestMethod.POST)

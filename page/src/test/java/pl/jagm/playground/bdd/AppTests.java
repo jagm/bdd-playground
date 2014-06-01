@@ -11,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
@@ -34,6 +35,15 @@ public class AppTests {
     public void simple() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("hello"));
+                .andExpect(view().name("hello"))
+                .andExpect(model().attribute("message", "Hello world!"));
+    }
+
+    @Test
+    public void test() throws Exception {
+        mockMvc.perform(get("/test"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("hello2"))
+                .andExpect(model().attribute("message", "Test"));
     }
 }
