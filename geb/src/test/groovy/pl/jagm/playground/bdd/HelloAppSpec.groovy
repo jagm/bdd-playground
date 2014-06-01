@@ -23,7 +23,7 @@ class HelloAppSpec extends GebReportingSpec {
 
     def "go to hello app"() {
         when:
-        go('http://localhost:9000/bdd/') // uses base url system property
+        go 'http://localhost:9000/bdd/'
 
         then:
         $('h1').text() == 'Hello world!'
@@ -40,6 +40,7 @@ class HelloAppSpec extends GebReportingSpec {
         waitFor(2, {
             $('h1').text() == 'Test'
         })
+        $('#browser-test').text().startsWith('nope ')
 
     }
 

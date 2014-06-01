@@ -1,4 +1,5 @@
 <html>
+    <title>Main</title>
 <body>
 	<h1>${message}</h1>
 
