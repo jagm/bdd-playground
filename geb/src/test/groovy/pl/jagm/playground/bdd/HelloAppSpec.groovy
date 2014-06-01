@@ -23,7 +23,7 @@ class HelloAppSpec extends GebReportingSpec {
 
     def "go to hello app"() {
         when:
-        go('http://localhost:8080/bdd/') // uses base url system property
+        go('http://localhost:9000/bdd/') // uses base url system property
 
         then:
         $('h1').text() == 'Hello world!'
